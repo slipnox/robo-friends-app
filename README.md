@@ -1,4 +1,4 @@
-#FoboFriends App
+#RoboFriends App
 
 This is a react tutorial project.
 
