@@ -11,5 +11,5 @@ npm install
 npm start
 ```
 
-## Unlicense
+## License
 [UNLICENSE](http://unlicense.org)
