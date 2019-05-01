@@ -9,6 +9,7 @@ To run the project:
 ```bash
 npm install
 npm start
+npm build
 ```
 
 ## License
