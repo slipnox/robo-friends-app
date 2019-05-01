@@ -11,8 +11,8 @@ To run the project:
 ```bash
 npm install
 npm start
-npm build
 ```
+`npm build` to build production app.
 
 ## License
 [UNLICENSE](http://unlicense.org)
