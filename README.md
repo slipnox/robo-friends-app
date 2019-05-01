@@ -2,7 +2,7 @@
 
 This is a react app following Andrei Neagoie react+redux tutorial.
 
-[Tutorial APP Demo](http://asilverio.com/demos/robofriends/index.html?target=_blank)
+[Tutorial APP Demo](http://asilverio.com/demos/robofriends/index.html)
 
 ## Installation
 
@@ -12,7 +12,7 @@ To run the project:
 npm install
 npm start
 ```
-`npm build` to build production app.
+Run `npm build` to build production app.
 
 ## License
 [UNLICENSE](http://unlicense.org)
