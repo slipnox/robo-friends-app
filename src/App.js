@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 import CardList from './CardList'
 import SearchBox from './SearchBox'
-import { robots } from './robots'
 
 import './App.css'
 
@@ -10,9 +9,19 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      robots,
+      robots: [],
       searchField: ''
     }
+  }
+
+  componentDidMount () {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then( users => {
+        if (! users.length) throw new Error('API CALL ERROR')
+        this.setState({ robots: users })
+      })
+      .catch(err => console.log(err))
   }
 
   onSearchChange = (event) => {
@@ -24,13 +33,21 @@ class App extends Component {
       return robot.name.toLowerCase().includes(this.state.searchField.toLowerCase())
     })
 
-    return (
-      <div className='tc'>
-        <h1 className='f2'>Robofriends</h1>
-        <SearchBox searchChange={this.onSearchChange} />
-        <CardList robots={filteredFrobots} />
-      </div>
-    )
+    if (this.state.robots.length === 0) {
+      return (
+        <div className='tc'>
+          <h3>LOADING...</h3>
+        </div>
+      )
+    } else {
+      return (
+        <div className='tc'>
+          <h1 className='f2'>Robofriends</h1>
+          <SearchBox searchChange={this.onSearchChange} />
+          <CardList robots={filteredFrobots} />
+        </div>
+      )
+    }
   }
 }
 
