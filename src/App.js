@@ -34,14 +34,4 @@ class App extends Component {
   }
 }
 
-// const App = () => {
-//   return (
-//     <div className='tc'>
-//       <h1>Robofriends</h1>
-//       <SearchBox />
-//       <CardList robots={state.robots} />
-//     </div>
-//   )
-// }
-
 export default App
