@@ -12,4 +12,4 @@ npm start
 ```
 
 ## Unlicense
-[Un li](http://unlicense.org)
+[UNLICENSE](http://unlicense.org)
